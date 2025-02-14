@@ -1,13 +1,15 @@
-<script setup></script>
+<script setup>
+import AppCard from '@/components/AppCard.vue'
+</script>
 
 <template>
-  <header></header>
-
-  <main>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-  </main>
-
-  <footer></footer>
+  <div class="m-10">
+    <AppCard />
+  </div>
 </template>
 
-<style scoped></style>
+<style>
+body {
+  background-color: #48435c;
+}
+</style>
