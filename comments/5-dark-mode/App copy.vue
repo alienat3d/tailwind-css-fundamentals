@@ -3,8 +3,11 @@
 import AppButton from '@/components/AppButton.vue'
 import AppInput from '@/components/AppInput.vue'
 // import TheMainNav from '@/components/TheMainNav.vue'
+
+// 4.1.2 А теперь добавим useDark composable из vueUse, чтобы управлять сменой режимов. useDark будет возвращать булево значение, где true значит, что тёмный режим включён и false — выключен.
 import { useDark } from '@vueuse/core'
 
+// 4.1.3 И каждый раз, когда значение isDark переключится на противоположное булево значение, то также и класс "dark" будет добавлен или убран с тега html, переключая режим на сайте.
 const isDark = useDark()
 </script>
 
@@ -12,6 +15,7 @@ const isDark = useDark()
   <div class="m-10">
     <!-- <AppCard /> -->
     <!-- <TheMainNav /> -->
+    <!-- 4.1.4 Ну и, осталось добавить чекбокс для демонстрации. -->
     <input v-model="isDark" type="checkbox" /> Dark mode
     <form action="">
       <label></label>
