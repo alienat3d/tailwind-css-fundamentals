@@ -1,5 +1,5 @@
 <script setup>
-import Flexbox from './components/AppFlexbox.vue'
+import AppGrid from './components/AppGrid.vue'
 import { useDark } from '@vueuse/core'
 
 const isDark = useDark()
@@ -10,7 +10,7 @@ const isDark = useDark()
     <input v-model="isDark" type="checkbox" class="" /> Dark mode
   </label>
   <div class="m-10">
-    <Flexbox />
+    <AppGrid />
   </div>
 </template>
 
