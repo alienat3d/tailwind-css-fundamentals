@@ -1,36 +1,16 @@
 <script setup>
-// import AppCard from '@/components/AppCard.vue'
-import AppButton from '@/components/AppButton.vue'
-import AppInput from '@/components/AppInput.vue'
-// import TheMainNav from '@/components/TheMainNav.vue'
+import Flexbox from './components/AppFlexbox.vue'
 import { useDark } from '@vueuse/core'
 
 const isDark = useDark()
 </script>
 
 <template>
+  <label class="absolute top-5 right-5 cursor-pointer">
+    <input v-model="isDark" type="checkbox" class="" /> Dark mode
+  </label>
   <div class="m-10">
-    <!-- <AppCard /> -->
-    <!-- <TheMainNav /> -->
-    <input v-model="isDark" type="checkbox" /> Dark mode
-    <form action="">
-      <label></label>
-      <AppInput label="Username" />
-      <AppButton>Submit</AppButton>
-    </form>
-    <p
-      class="first-letter:text-5xl first-line:text-2xl selection:bg-green-300 selection:text-black"
-    >
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae facere tempora repudiandae,
-      praesentium aliquam enim repellendus vero laudantium totam neque culpa optio quas qui
-      consectetur quibusdam! Quasi a officia omnis!
-    </p>
-    <ul class="mt-5 list-disc marker:text-green-700 marker:text-2xl">
-      <li>Vue</li>
-      <li>React</li>
-      <li>Svelte</li>
-      <li>Angular</li>
-    </ul>
+    <Flexbox />
   </div>
 </template>
 
